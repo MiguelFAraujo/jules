@@ -1,0 +1,16 @@
+# Arquivos de banco de dados
+*.db
+*.sqlite3
+
+# Arquivos de log
+*.log
+
+# Diretórios de cache do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Arquivos de ambiente virtual
+.venv/
+venv/
+env/

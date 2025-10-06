@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pessoas</title>
+</head>
+<body>
+    <h1>Cadastro de Pessoas</h1>
+    <form action="/add" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <hr>
+    <h2>Pessoas Cadastradas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pessoa in pessoas %}
+            <tr>
+                <td>{{ pessoa.id }}</td>
+                <td>{{ pessoa.nome }}</td>
+                <td>{{ pessoa.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
